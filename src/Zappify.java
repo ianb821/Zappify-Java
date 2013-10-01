@@ -25,6 +25,10 @@ public class Zappify {
     
     // add your Zappos API Key here to use Zappify
 	private static final String API_KEY = "&key=PUT_YOUR_KEY_HERE";
+    
+    // add your SendGrid Username and Password here
+    private static final String SG_USERNAME = "YOUR_USERNAME_HERE";
+    private static final String SG_PASSWORD = "YOUR_PASSWORD_HERE";
 
 	// main method for the program
 	public static void main(String[] args) {
@@ -121,7 +125,7 @@ public class Zappify {
 
 
 			// create the call to the SendGrid API to send an email notification
-			String urlString = "https://sendgrid.com/api/mail.send.json?api_user=ianb821&api_key=sendgridpass1&to=" + URLEncoder.encode(item.getEmailAddress(), "UTF-8") +
+			String urlString = "https://sendgrid.com/api/mail.send.json?api_user=" + SG_USERNAME + "&api_key=" + SG_PASSWORD + "&to=" + URLEncoder.encode(item.getEmailAddress(), "UTF-8") +
 					"&subject=" + URLEncoder.encode(subjectForEmail, "UTF-8") + "&text=" + URLEncoder.encode(textBodyForEmail, "UTF-8") + 
 					URLEncoder.encode(coreValueForEmail, "UTF-8") + "&from=noreply@zappos.com";
 
