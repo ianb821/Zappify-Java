@@ -11,7 +11,7 @@ Zappify is a sample app that I wrote as a challenge for Zappos.  It makes use of
 
 Zappify makes use of the [Gson Library](http://code.google.com/p/google-gson/) to convert the JSON results from the Zappos API into Java Objects.
 
-[SendGrid](www.sendgrid.com) is used to send the email notifications.
+[SendGrid](http://www.sendgrid.com) is used to send the email notifications.
 
 ###Note
 To actually use the project:
